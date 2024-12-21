@@ -1,0 +1,65 @@
+<div class="container mx-auto py-8  ">
+  <section class="w-100 bg-cover bg -center rounded-full animate-pulse hover:animate-none" style="background-image:url(https://preview.redd.it/yu-gi-oh-anime-protagonists-gen-1-to-8-v0-rw1cbcggmhla1.jpg?width=1080&crop=smart&auto=webp&s=5e90cea2b1814b5fde4b28a779287da7db63e5db); height: 650px;">
+  
+    <div class="bg-opacity-50 w-full h-full flex items-center justify-center md:justify-start md:ml-[30%]">
+      <div class="text-center md:text-center md:mt-[3%]">
+        <h2 class="font-poppins font-bold text-center  sm:text-3xl md:text-4xl lg:text-5xl" style="color: rgb(255, 255, 255);font-size: 35px;font-family:Audiowide, sans-serif; font-weight: bold; font-style: tech-oriented;">
+          It's Time To Duel
+        </h2><br>
+        <p class="font-poppins font-bold text-center  sm:text-3xl md:text-4xl lg:text-5xl" style="color: rgb(255, 255, 255);font-size: 25px;font-family:Audiowide, sans-serif; font-weight: bold; font-style: tech-oriented;">
+         YOur Ultimate Destination For Free Games
+      </p>
+        <button class="text-white  bg-gradient-to-br from-pink-800 to-green-300 to-green-300 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 mt-8 md:ml-[8%]" style="font-weight: bold; font-size: 1.75rem; background-color: rgb(77, 74, 74); padding: 16px 28px; border: none; outline: none;border-radius: 75px;font-family:Audiowide, sans-serif; font-weight: bold; font-style: tech-oriented;">
+          Explore Now
+        </button>
+      </div>
+    </div>
+  </section>
+        
+
+    
+            
+  <h1  style="color: white; font-size: 45px; justify-content: center; text-align: center; align-items: center; margin-top: 25px;font-family:Audiowide, sans-serif; font-weight: bold; font-style: tech-oriented;">IT'S TIME TO DUEL</h1>
+
+        <div class="container mx-auto px-4" style="font-family:Audiowide, sans-serif; font-weight: bold; font-style: tech-oriented;">
+            <div class="flex flex-wrap -mx-4">
+                <div *ngFor="let item of CardsItems" class="w-full md:w-1/3 px-4 mb-4">
+            <div   style="justify-content: center; align-items: center; margin-top: 25px;">
+                <div class="flex flex-col items-center">
+                  <div class="flex flex-col justify-between p-5 leading-normal">
+                    <a [routerLink]="['/cards', item.id]">
+                    <img [src]="item.Image" class="card-img-top" alt="{{ item.name }}" >
+                  </a>
+                    <p style="font-size: 15px; color: rgb(255, 255, 255); ">{{item.description}}</p>
+                    <ul style="margin-top: 2%;">
+                      <li>
+                        <p style=" color: rgb(255, 255, 255); font-size: 13px; display: inline;">EVOLUATION RECENTES :</p>
+                        <span style="font-size: 13px; color: rgb(7, 7, 149);  display: inline;">{{item.Evaluation}}</span>
+                      </li>
+                      <li>
+                        <p style=" color: rgb(255, 255, 255); font-size: 13px; display: inline;">TOUTES LES EVAL :</p>
+                        <span style="font-size: 13px; color: rgb(7, 7, 149);  display: inline;">{{item.Evals}}</span>
+                      </li>
+                      
+                    </ul>
+                    <p style="font-size: 13px; color: rgb(255, 255, 255);">Tags populaires des utilisateurs et utilisatrices pour ce produit :</p>
+                    <div style="display: flex;">
+                      <button class="bg-blue-900 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-800" style="margin-right: 5px; font-size: 12px; color: white;">{{item.category1}}</button>
+                      <button class="bg-blue-900 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-800" style="margin-right: 5px; font-size: 12px; color: white;">{{item.category2}}</button>
+                      <button class="bg-blue-900 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-800" style="margin-right: 5px; font-size: 12px; color: white;">{{item.category3}}</button>
+                      <button class="bg-blue-900 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-800" style="margin-right: 5px; font-size: 12px; color: white;">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    
+</div>
+
+        
+       
+      
+</div>
+
+

@@ -1,0 +1,48 @@
+<div class="container mx-auto py-8" >
+    <section class="w-100 bg-cover bg-center rounded-full animate-pulse hover:animate-none" style="background-image:url(https://i.ytimg.com/vi/PY7eJDBjuAk/maxresdefault.jpg); height: 650px;">
+            
+    </section>
+        <div class="container mx-auto px-4" style="font-family:Audiowide, sans-serif; font-weight: bold; font-style: tech-oriented;">
+              <div class="flex flex-wrap -mx-4">
+                  <div *ngFor="let item of SimulationItems" class="w-full md:w-1/3 px-4 mb-4">
+              <div    style="justify-content: center; align-items: center; margin-top: 25px;">
+                  <div class="flex flex-col items-center">
+                    <div class="flex flex-col justify-between p-5 leading-normal">
+                      
+                      <a  [routerLink]="['/strategy', item.id]">
+                      <img [src]="item.Image" class="card-img-top" alt="" >
+                    </a>
+                      <p style="font-size: 13px; color: rgb(255, 255, 255); ">{{item.description}}</p>
+                      <ul>
+                        <li>
+                          <p style=" color: rgb(255, 252, 252); font-size: 13px; display: inline;">EVOLUATION RECENTES : </p>
+                          <span style="font-size: 13px; color: rgb(47, 47, 220);  display: inline;">  {{item.Evaluation}}</span>
+                        </li>
+                        <li>
+                          <p style=" color: rgb(255, 255, 255); font-size: 13px; display: inline;">TOUTES LES EVAL : </p>
+                          <span style="font-size: 13px; color: rgb(47, 47, 220);  display: inline;">  {{item.Evals}}</span>
+                        </li>
+                        <li>
+                        
+                      </ul>
+                      <p style="font-size: 13px; color: rgb(255, 255, 255);">Tags populaires des utilisateurs et utilisatrices pour ce produit :</p>
+                      <div style="display: flex;">
+                        <button class="bg-blue-900 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-800" style="margin-right: 5px; font-size: 12px; color: white;">{{item.category1}}</button>
+                        <button class="bg-blue-900 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-800" style="margin-right: 5px; font-size: 12px; color: white;">{{item.category2}} </button>
+                        <button class="bg-blue-900 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-800" style="margin-right: 5px; font-size: 12px; color: white;">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+      
+  </div>
+  
+          
+         
+        
+  </div>
+  
+  
+  
