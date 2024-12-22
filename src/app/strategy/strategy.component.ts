@@ -11,7 +11,7 @@ export class StrategyComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  SimulationItems = [
+  StrategyItems = [
     {
       id:1,
       name: 'Builders of Greece',

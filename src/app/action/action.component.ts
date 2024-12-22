@@ -26,7 +26,7 @@ sanitizer: any;
       EDITION :"SQUARE ENIX",
     },
     {
-      id:1,
+      id:2,
       name: 'ELDEN RING',
       description:"NE NOUVELLE AVENTURE GRANDIOSE VOUS ATTEND Levez-vous, Sans-éclat, et puisse la grâce guider vos pas. Brandissez la puissance du Cercle d'Elden. Devenez Seigneur de l'Entre-terre.",
       Image:"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header_alt_assets_2_french.jpg?t=1719417781",
@@ -38,7 +38,7 @@ sanitizer: any;
     },
   
     {
-      id:1,
+      id:3,
       name:'Call of Duty®',
       description:"Le QG Call of Duty® prend en charge Call of Duty®: Black Ops 6, Call of Duty®: Modern Warfare® III, Call of Duty®: Modern Warfare® II et Call of Duty®: Warzone™.",
       Image:"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/header.jpg?t=1719263879",
@@ -49,7 +49,7 @@ sanitizer: any;
       EDITION :"Activision",
     },
     {
-      id:1,
+      id:4,
       name:'Snowbreak: Containment Zone',
       description:"Snowbreak: Containment Zone, FPS et RPG de science-fiction en 3D en bêta ! Visez le destin et terminez les niveaux pour obtenir un personnage de qualité orange !",
       Image:"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2668080/header.jpg?t=1717404762",
@@ -60,7 +60,7 @@ sanitizer: any;
       EDITION :"Amazing Seasun Games",
     },
     {
-      id:1,
+      id:5,
       name:"Forza Horizon 4",
       description:"Les saisons dynamiques changent tout sur le plus grand festival automobile au monde. En solo ou en équipe, explorez les magnifiques paysages du Royaume-Uni historique dans un monde ouvert partagé.",
       Image:"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1293830/header.jpg?t=1702576030",
@@ -71,7 +71,7 @@ sanitizer: any;
       EDITION :"Xbox Game Studios",
     },
     {
-      id:1,
+      id:6,
       name:"Horizon Forbidden West™ Complete Edition",
       description:"Profitez de l'expérience Horizon Forbidden West™ complète grâce à du contenu bonus et l'extension Burning Shores. L'extension Burning Shores inclut du contenu additionnel, avec des quêtes, personnages et expériences inédits dans une nouvelle zone aussi magnifique qu'impitoyable.",
       Image:"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2420110/header.jpg?t=1717622622",
