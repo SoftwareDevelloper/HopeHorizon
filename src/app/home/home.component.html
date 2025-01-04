@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="min-h-screen  text-white flex flex-col items-center" style="background: radial-gradient(circle,#82ff69, #3748c6 , #030339,rgb(44, 24, 72))">
     <section class="w-full bg-cover bg-center h-96 animated-bg" style="background-image: url(assets/IMAGES/2.png);">
         <div class=" bg-opacity-50 w-full h-full flex items-center justify-center">
@@ -187,12 +188,18 @@
     <br>
   
     <!-- Call to Action Section -->
-    <div class="w-full  mt-10 py-10 text-center" style="background: radial-gradient(circle, #3748c6 , #030339,rgb(52, 25, 91))">
-      <h2 class="text-l font-bold mb-4">Join the Community</h2>
-      <p class="text-xl mb-6">Stay updated with the latest game releases and community events</p>
-      <a href="/register" class="text-white  bg-gradient-to-br from-blue-900 to-blue-400 to-blue-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-8 py-3 mt-8 " style="font-weight: bold; background-color: rgb(77, 74, 74); border: none; outline: none;border-radius: 15px;font-family:Audiowide, sans-serif; font-weight: bold; font-style: tech-oriented;" role="button">
-        sign in
-      </a>    
-    </div>
+    <div *ngIf="!isLoggedIn()" 
+    class="w-full mt-10 py-10 text-center" 
+    style="background: radial-gradient(circle, #3748c6 , #030339, rgb(52, 25, 91))">
+ <h2 class="text-l font-bold mb-4">Join the Community</h2>
+ <p class="text-xl mb-6">Stay updated with the latest game releases and community events</p>
+ <a href="/register" 
+    class="text-white bg-gradient-to-br from-blue-900 to-blue-400 to-blue-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-8 py-3 mt-8" 
+    style="font-weight: bold; background-color: rgb(77, 74, 74); border: none; outline: none; border-radius: 15px; font-family:Audiowide, sans-serif; font-weight: bold; font-style: tech-oriented;" 
+    role="button">
+   Sign In
+ </a>
+</div>
+
   </div>
   

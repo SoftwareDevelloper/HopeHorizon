@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewcardsGamesComponent } from './viewcards-games.component';
+import { NavbarAdminComponent } from './navbar-admin.component';
 
-describe('ViewcardsGamesComponent', () => {
-  let component: ViewcardsGamesComponent;
-  let fixture: ComponentFixture<ViewcardsGamesComponent>;
+describe('NavbarAdminComponent', () => {
+  let component: NavbarAdminComponent;
+  let fixture: ComponentFixture<NavbarAdminComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewcardsGamesComponent ]
+      declarations: [ NavbarAdminComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ViewcardsGamesComponent);
+    fixture = TestBed.createComponent(NavbarAdminComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

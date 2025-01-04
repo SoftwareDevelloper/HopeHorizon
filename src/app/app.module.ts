@@ -1,9 +1,11 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { AboutComponent } from './about/about.component';
 import { ActionComponent } from './action/action.component';
+import { AdminDashboardComponent } from './Admin/admin-dashboard/admin-dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardsComponent } from './cards/cards.component';
@@ -11,17 +13,13 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PipePipe } from './pipe.pipe';
 import { RegisterComponent } from './register/register.component';
 import { SimulationComponent } from './simulation/simulation.component';
 import { SportComponent } from './sport/sport.component';
 import { StrategyComponent } from './strategy/strategy.component';
-import { ViewActionGamesComponent } from './Views/view-action-games/view-action-games.component';
-import { ViewcardsGamesComponent } from './Views/viewcards-games/viewcards-games.component';
-import { ViewsimulationGamesComponent } from './Views/viewsimulation-games/viewsimulation-games.component';
-import { ViewsportGamesComponent } from './Views/viewsport-games/viewsport-games.component';
-import { ViewstrategyGamesComponent } from './Views/viewstrategy-games/viewstrategy-games.component';
-import { PipePipe } from './pipe.pipe';
-
+import { NavbarAdminComponent } from './Admin/navbar-admin/navbar-admin.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,19 +33,19 @@ import { PipePipe } from './pipe.pipe';
     SimulationComponent,
     StrategyComponent,
     AboutComponent,
-    ViewActionGamesComponent,
-    ViewcardsGamesComponent,
-    ViewsimulationGamesComponent,
-    ViewsportGamesComponent,
-    ViewstrategyGamesComponent,
     LoginComponent,
     PipePipe,
+    AdminDashboardComponent,
+    NavbarAdminComponent,
+    UserProfileComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

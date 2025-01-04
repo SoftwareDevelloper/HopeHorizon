@@ -1,24 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: 'app-navbar-admin',
+  templateUrl: './navbar-admin.component.html',
+  styleUrls: ['./navbar-admin.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarAdminComponent implements OnInit {
+
   isLoggedIn: boolean = false;
   userRole: string = '';
 
-  constructor(private authService: AuthService,private router : Router) { }
+  constructor(private authService: AuthService, private router: Router) { } 
 
   ngOnInit(): void {
-    // Check login status when the component initializes
     this.updateLoginStatus();
   }
-
-  // Check login status and update variables
   updateLoginStatus() {
     this.isLoggedIn = this.authService.isLoggedIn();
     this.userRole = this.authService.getUserRole();
@@ -26,19 +24,7 @@ export class NavbarComponent implements OnInit {
     console.log('User Role:', this.userRole);  // Log the role
   }
 
-  isMenuOpen = false;
-  isUserOpen = false;
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-    if (this.isUserOpen) {
-      this.isUserOpen = false; 
-    }
-  }
-
-  userProfile() {
-   this.router.navigate(['/profile']);
-  }
 
   logout() {
     this.authService.logout();

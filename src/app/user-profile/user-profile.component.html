@@ -1,0 +1,88 @@
+<app-navbar></app-navbar>
+
+<div class="container mx-auto px-5">
+    <div class="flex flex-col  justify-center mt-0" style="align-items: end;">
+        <button type="submit" class="py-3 mt-10 bg-blue-600 rounded-md text-white text-sm hover:bg-blue-700" style="width: 180px;" (click)="Logout()">Deconnect</button>
+    </div>
+    
+    <div class="flex flex-col items-center mt-2">
+            <img class="rounded-lg bg-transparent" style="width: 300px;height: 300px;" src="https://static.thenounproject.com/png/2894391-200.png" alt="image description">
+        
+        <form class="flex flex-col items-center mt-5" style="margin-left: 2%;" >
+            <div class="relative   mb-5 group" style="width: 300px;">
+                <input type="text" name="floating_username" [ngModel]="User.username" id="floating_username" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" readonly/>
+                <label for="floating_username" class="peer-focus:font-medium absolute text-md text-white dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6" >username</label>
+            </div>
+            <div class="relative  mb-5 group" style="width: 300px;">
+                <input type="email" name="floating_email" id="floating_email" [ngModel]="User.email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" readonly/>
+                <label for="floating_email" class="peer-focus:font-medium absolute text-md text-white dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+            </div>
+            <div class="relative   mb-5 group" style="width: 300px;">
+                <input type="password" name="floating_password" id="floating_password" [ngModel]="User.password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" readonly/>
+                <label for="floating_password" class="peer-focus:font-medium absolute text-md text-white dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
+            </div>
+            <div class="edit" style="display: flex;flex-direction:column;align-items: start;justify-content: center;margin-left: 3%;">
+                <button type="submit" class="py-3 mt-10 bg-blue-600 rounded-md text-white text-sm hover:bg-blue-700" style="width: 180px;height: 50px;">Edit</button>
+            </div>
+        </form>
+        
+    </div>
+ 
+        <h2 class="text-3xl font-semibold text-white dark:text-white text-center mt-10" style="text-decoration:underline rgb(0, 0, 66);">My Favorites Games</h2>
+        <section class="w-full max-w-8xl mt-5 px-4">
+            <div class="container mx-auto px-4" style="font-family:Audiowide, sans-serif; font-weight: bold; font-style: tech-oriented;">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div *ngFor="let item of FavoriteGames "  class="w-full md:w-5/10 px-4 mb-4" >
+                <div   style="justify-content: center; align-items: center;">
+                    <div class="flex flex-col items-center  ">
+                      <div class=" rounded-lg shadow-md overflow-hidden">
+                        <a>
+                        <img [src]="item.image" class="card-img-top" alt="">
+                        </a>
+                        <p style="font-size: 15px; color: rgb(255, 255, 255); ">{{item.description}}</p>
+                        <ul>
+                          <li>
+                            <p style=" color: rgb(255, 255, 255); font-size: 13px; display: inline;">Evaluation:</p>
+                            <span style="font-size: 13px; color: rgb(126, 126, 246);  display: inline;"> {{item.evaluation}} </span>
+                          </li>
+                          <li>
+                            <p style=" color: rgb(255, 255, 255); font-size: 13px; display: inline;">DATE:</p>
+                            <span style="font-size: 13px; color: rgb(126, 126, 246);  display: inline;"> {{item.date}}  </span>
+                          </li>
+                          <li>
+                            <p style=" color: rgb(255, 255, 255); font-size: 13px; display: inline;">Edition:</p>
+                            <span style="font-size: 13px; color: rgb(126, 126, 246);  display: inline;"> {{item.edition}} </span>
+                          </li>
+                          <li>
+                            <p style=" color: rgb(255, 255, 255); font-size: 13px; display: inline;">EVALS:</p>
+                            <span style="font-size: 13px; color: rgb(126, 126, 246);  display: inline;"> {{item.evals}} </span>
+                          </li>
+                         
+                        </ul>
+                        <p style="font-size: 13px; color: rgb(255, 255, 255);">Popular tags from users for this product:</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
+                          <button class="bg-blue-900 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-800" style=" font-size: 10px; color: white;"> {{item.category1}} </button>
+                          <button class="bg-blue-900 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-800" style=" font-size: 10px; color: white;"> {{item.category2}} </button>
+                          <button class="bg-blue-900 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-800" style=" font-size: 10px; color: white;"> {{item.category3}} </button>
+                        </div>
+                        <br>
+                        <div class="download" style="display: flex;justify-content: center;align-items: center;">
+                          <a href={{item.url}} target="_blank"   rel={{item.url}} class="bg-blue-900 px-6 py-3 rounded-md font-medium hover:bg-blue-800 text-white bg-cover bg-opacity-50">download</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        
+        </div>
+        
+            
+           
+        </section>
+        
+
+</div>
+
+
+  
