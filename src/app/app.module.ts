@@ -20,6 +20,7 @@ import { SportComponent } from './sport/sport.component';
 import { StrategyComponent } from './strategy/strategy.component';
 import { NavbarAdminComponent } from './Admin/navbar-admin/navbar-admin.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserUpdateComponent } from './user-update/user-update.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     AdminDashboardComponent,
     NavbarAdminComponent,
     UserProfileComponent,
+    UserUpdateComponent,
     
   ],
   imports: [

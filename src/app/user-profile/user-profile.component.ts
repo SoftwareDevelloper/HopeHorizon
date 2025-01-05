@@ -20,7 +20,7 @@ export class UserProfileComponent implements OnInit {
     this.loadUserInfo();
     this.loadFavoriteGames();
   }
-
+//get favorite games
   loadFavoriteGames(): void {
     this.authService.getFavoriteGames(this.userId).subscribe(
       (data:any)=>{
@@ -32,6 +32,24 @@ export class UserProfileComponent implements OnInit {
       }
     )
   }
+      //remove Game from favorite list
+      removeFromFavorite(gameId: number): void {
+        this.authService.RemoveFavoriteGame(this.userId, gameId, {}).subscribe(
+          (data: any) => {
+            console.log('Game removed from favorites:', data);
+            this.loadFavoriteGames();
+          },
+          (error) => {
+            console.error('Error removing game from favorites:', error);
+          }
+        );
+
+      }
+
+
+
+
+// get user info by id
   loadUserInfo(): void {
     this.authService.GetInternoteByUserId(this.userId).subscribe(
       (data: any) => {
@@ -43,8 +61,17 @@ export class UserProfileComponent implements OnInit {
       }
     );
   }
+  EditUserInfo(): void {
+    this.router.navigate(['/updateProfile']);
+  }
+    
+
+
+
+//logout
   Logout() {
     this.authService.logout();
     this.router.navigate(['/login']);
   }
+
 }

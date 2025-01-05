@@ -5,6 +5,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
+  addFavoriteGame(gameid: number, userId: number) {
+    throw new Error('Method not implemented.');
+  }
   private apiURL = 'http://localhost:9000/Internote';
   constructor(private http : HttpClient) { }
   login(credentials:{email:string;password:string}): Observable<any> {

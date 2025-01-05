@@ -1,9 +1,36 @@
 <app-navbar></app-navbar>
 
 <div class="container mx-auto px-5">
-    <div class="flex flex-col  justify-center mt-0" style="align-items: end;">
-        <button type="submit" class="py-3 mt-10 bg-blue-600 rounded-md text-white text-sm hover:bg-blue-700" style="width: 180px;" (click)="Logout()">Deconnect</button>
-    </div>
+    <div class="flex flex-col justify-center mt-0" style="align-items: end">
+        <button
+          type="submit"
+          class="py-3 mt-10 bg-blue-600  text-white text-sm  flex items-center justify-center gap-2"
+          style="width: 180px;background: linear-gradient(100deg,rgb(0, 0, 65),rgb(0, 26, 130));"
+          (click)="Logout()"
+        >
+         Deconnect
+          <i class="bi bi-box-arrow-right">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="white"
+              class="bi bi-box-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+      
     
     <div class="flex flex-col items-center mt-2">
             <img class="rounded-lg bg-transparent" style="width: 300px;height: 300px;" src="https://static.thenounproject.com/png/2894391-200.png" alt="image description">
@@ -22,7 +49,7 @@
                 <label for="floating_password" class="peer-focus:font-medium absolute text-md text-white dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
             </div>
             <div class="edit" style="display: flex;flex-direction:column;align-items: start;justify-content: center;margin-left: 3%;">
-                <button type="submit" class="py-3 mt-10 bg-blue-600 rounded-md text-white text-sm hover:bg-blue-700" style="width: 180px;height: 50px;">Edit</button>
+                <button type="submit"(click)="EditUserInfo()" class="py-3 mt-10 bg-blue-600 text-white text-sm hover:bg-blue-700" style="width: 180px;height: 50px;border-radius: 50px;">Edit</button>
             </div>
         </form>
         
@@ -39,6 +66,7 @@
                         <a>
                         <img [src]="item.image" class="card-img-top" alt="">
                         </a>
+                      
                         <p style="font-size: 15px; color: rgb(255, 255, 255); ">{{item.description}}</p>
                         <ul>
                           <li>
@@ -69,6 +97,15 @@
                         <div class="download" style="display: flex;justify-content: center;align-items: center;">
                           <a href={{item.url}} target="_blank"   rel={{item.url}} class="bg-blue-900 px-6 py-3 rounded-md font-medium hover:bg-blue-800 text-white bg-cover bg-opacity-50">download</a>
                         </div>
+                        <div class="RemoveIcon" style="display:flex;justify-content:right;margin-right:5%;">
+                          <button class="RemoveIcon"  (click)="removeFromFavorite(item.id)">
+                           <i class="bi bi-trash">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-trash3" viewBox="0 0 16 16">
+                              <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                            </svg>
+                           </i>
+                          </button>
+                      </div>
                       </div>
                     </div>
                   </div>

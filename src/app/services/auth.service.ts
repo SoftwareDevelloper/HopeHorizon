@@ -73,14 +73,44 @@ export class AuthService {
   GetInternoteByUserId(id: number): Observable<any> {
     return this.http.get(`${this.apiURL}/GetInternoteDTO/${id}`);
   }
-  UpdateInternotePassword(data : any): Observable<any> {
-    return this.http.put(`${this.apiURL}/UpdateUsersPassword/{id}`, data);
+  UpdateInternote(id:number,data : any): Observable<any> {
+    return this.http.put(`${this.apiURL}/UpdateUsers/${id}`, data);
+  }
+   //ADD favorite game
+   addFavoriteGame(user_id:number,game_id:number,data:any):Observable<any> {
+    return this.http.post(`${this.apiURL}/favorites/${user_id}/${game_id}`,data);
   }
   DeleteInternote(): Observable<any> {
     return this.http.delete(`${this.apiURL}/DeleteInternote/{id}`);
   }
-    //Fetch all favorite games
+  //Fetch all favorite games
     getFavoriteGames(user_id: number) {
       return this.http.get(`${this.apiURL}/favorites/${user_id}`);
     }
+    //Remove favorite game
+    RemoveFavoriteGame(user_id:number,game_id:number,data:any):Observable<any>{
+      return this.http.delete(`${this.apiURL}/favorites/${user_id}/${game_id}`,data);
+    }
+
+
+
+    getUserId(): number | null {
+      const token = this.getToken();
+      if (token) {
+        try {
+          const decoded: any = jwtDecode(token); 
+          if (decoded.sub) { 
+            return parseInt(decoded.sub, 10); 
+          } else {
+            console.error('User ID not found in token.');
+            return null;
+          }
+        } catch (error) {
+          console.error('Error decoding token:', error);
+          return null;
+        }
+      }
+      return null;
+    }
+   
 }

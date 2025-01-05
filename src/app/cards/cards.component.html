@@ -62,6 +62,15 @@
                 <div class="download" style="display: flex;justify-content: center;align-items: center;">
                   <a href={{item.url}}  target="_blank" rel={{item.title}} class="bg-blue-900 px-6 py-3 rounded-md font-medium hover:bg-blue-800 text-white bg-cover bg-opacity-50">download</a>
                 </div>
+                <div class="favIcon" style="display:flex;justify-content:right;margin-right:5%;">
+                  <button class="FavoriteIcon" (click)="addToFavorite(item.id)">
+                    <i class="fas fa-heart">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                      </svg>
+                    </i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

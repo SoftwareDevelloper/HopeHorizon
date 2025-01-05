@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="container mx-auto px-5">
+    <h1 class="text-center text-2xl text-white mb-5">Update Your Profile</h1>
+    <div class="flex justify-center items-center">
+      <form class="w-full max-w-sm" (submit)="UpdateUserInfo()">
+        <div class="mb-4">
+          <label for="username" class="block text-white">Your Name</label>
+          <input type="text" name="username" id="username" [(ngModel)]="UsersUpdate.username" placeholder="Your name" class="form-control rounded-lg block w-full px-4 py-2" />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-white">Your Email</label>
+          <input type="email" name="email" id="email" [(ngModel)]="UsersUpdate.email" placeholder="Your email" class="form-control rounded-lg block w-full px-4 py-2" />
+        </div>
+        <div class="mb-4">
+          <label for="password" class="block text-white">Your Password</label>
+          <input type="password" name="password" id="password" [(ngModel)]="UsersUpdate.password" placeholder="Your password" class="form-control rounded-lg block w-full px-4 py-2" />
+        </div>
+        <button type="submit" class="w-full h-[50px] rounded-full bg-blue-900 text-white font-semibold text-lg py-2 mt-4">Update</button>             
+      </form>
+    </div>
+  </div>
+  

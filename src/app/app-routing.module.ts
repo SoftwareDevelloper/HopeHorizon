@@ -11,6 +11,7 @@ import { SimulationComponent } from './simulation/simulation.component';
 import { SportComponent } from './sport/sport.component';
 import { StrategyComponent } from './strategy/strategy.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserUpdateComponent } from './user-update/user-update.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: "About" , component:AboutComponent},
   {path: "login" , component:LoginComponent},
   {path:"AdminDashboard",component:AdminDashboardComponent},
-  {path:"profile" , component:UserProfileComponent}
+  {path:"profile" , component:UserProfileComponent},
+  {path:"updateProfile",component:UserUpdateComponent},
 ];
 
 @NgModule({
